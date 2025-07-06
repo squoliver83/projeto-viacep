@@ -35,6 +35,11 @@ export function init() {
     state.btnClear.addEventListener('click', handleBtnClearClick);
     state.btnSave.addEventListener('click', handleBtnSaveClick);
     state.inputCep.addEventListener('change', handleInputCepChange);
+    state.inputNumber.addEventListener('keyup', handleInputNumberKeyUp);
+}
+
+function handleInputNumberKeyUp(event) {
+    state.address.number = event.target.value;
 }
 
 async function handleInputCepChange(event) {
@@ -59,7 +64,7 @@ async function handleInputCepChange(event) {
 
 async function handleBtnSaveClick(event) {
     event.preventDefault();
-    console.log(event.target);
+    console.log(state.address);
 }
 
 function handleBtnClearClick(event) {
@@ -77,7 +82,6 @@ function clearForm() {
     setFormError("number", "");
 
     state.inputCep.focus();
-
 }
 
 function handleInputNumberChange(event) {
