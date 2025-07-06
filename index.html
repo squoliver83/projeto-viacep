@@ -24,40 +24,48 @@
         </nav>
     </header>
     <main>
-        <section id="form-section">
-            <div>
+        <section id="form-section" class="form-container">
+            <div class="card-form">
                 <form name="newAddress">
-                    <div>
+                    <div class="form-control">
                         <label for="cep">CEP</label>
                         <input 
                             name="cep" 
-                            id="cep" 
+                            id="cep"
+                            class="form-input" 
                             type="text" 
                             placeholder="CEP">
-                    </div>
-                    <div>
+                        <div class="error-message">Campo obrigatório</div>
+                    </div>                    
+                    <div class="form-control">
                         <label for="street">Logradouro</label>
                         <input 
                             name="street" 
                             id="cep" 
+                            class="form-input" 
                             type="text" 
-                            placeholder="Logradouro">
+                            placeholder="Logradouro"
+                            disabled>
                     </div>
-                    <div>
+                    <div class="form-control">
                         <label for="number">Número</label>
                         <input 
                             name="number" 
                             id="number" 
+                            class="form-input" 
                             type="text" 
                             placeholder="Número">
+                        <div class="error-message">Campo obrigatório</div>
                     </div>
-                    <div>
+                    <div class="form-control">
                         <label for="city">Cidade</label>
                         <input 
                             name="city" 
                             id="city" 
+                            class="form-input" 
                             type="text" 
-                            placeholder="Cidade">
+                            placeholder="Cidade"
+                            disabled>
                     </div>
                     <div>
                         <button type="submit">Salvar</button>
